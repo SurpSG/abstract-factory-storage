@@ -22,8 +22,11 @@ public class Main {
         movie.setName("film name1");
         movie.setYear(2000);
         movie.setGenres(Arrays.asList("genre1", "genre2"));
+        System.out.println("created movie: " + movie);
 
         storageContainer.insertMovie(movie);
+        System.out.println("movie saved");
+
 
         FiltersAbstractFactory filtersFactory = storageContainer.getFiltersFactory();
 
@@ -38,6 +41,7 @@ public class Main {
                 .addFilter(genreFilter)
                 .addFilter(yearFilter);
 
+        System.out.println("Get movies by filters: "+filterContainer);
         storageContainer.getMovieByFilter(filterContainer)
                 .forEach(System.out::println);
     }

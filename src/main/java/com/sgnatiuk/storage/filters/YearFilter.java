@@ -23,4 +23,12 @@ public abstract class YearFilter implements IFilter {
     public void setUpValue(int upValue) {
         this.upValue = upValue;
     }
+
+    @Override
+    public String toString() {
+        return "YearFilter{" +
+                "lowValue=" + lowValue +
+                ", upValue=" + upValue +
+                '}';
+    }
 }

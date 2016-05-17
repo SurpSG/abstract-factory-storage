@@ -14,7 +14,7 @@ public interface IStorage<P extends IFilter> {
 
     void insertMovie(Movie movie);
 
-    Collection<Movie> getMovieByFilter(FiltersContainer<P> filter);
+    Collection<Movie> getMoviesByFilter(FiltersContainer<P> filter);
 
     FiltersAbstractFactory<P> getFiltersFactory();
 }

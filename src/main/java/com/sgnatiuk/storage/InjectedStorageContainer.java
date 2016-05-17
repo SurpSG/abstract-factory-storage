@@ -19,7 +19,7 @@ public class InjectedStorageContainer {
     }
 
     public Collection<Movie> getMovieByFilter(FiltersContainer filter){
-        return storage.getMovieByFilter(filter);
+        return storage.getMoviesByFilter(filter);
     }
 
     public FiltersAbstractFactory<?> getFiltersFactory(){

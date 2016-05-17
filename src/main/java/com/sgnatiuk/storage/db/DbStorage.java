@@ -25,7 +25,7 @@ public class DbStorage implements IStorage<DbFilter> {
     }
 
     @Override
-    public Collection<Movie> getMovieByFilter(FiltersContainer<DbFilter> filter) {
+    public Collection<Movie> getMoviesByFilter(FiltersContainer<DbFilter> filter) {
 
         String selectQuery = buildSelectQuery(filter);
 

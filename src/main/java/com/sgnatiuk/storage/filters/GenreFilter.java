@@ -17,4 +17,11 @@ public abstract class GenreFilter implements IFilter {
     public void setGenres(List<String> genres) {
         this.genres = genres;
     }
+
+    @Override
+    public String toString() {
+        return "GenreFilter{" +
+                "genres=" + genres +
+                '}';
+    }
 }

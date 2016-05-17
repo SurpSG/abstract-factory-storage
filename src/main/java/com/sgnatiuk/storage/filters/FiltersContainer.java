@@ -29,4 +29,11 @@ public class FiltersContainer<T extends IFilter> {
     public List<T> getFilters(){
         return filters;
     }
+
+    @Override
+    public String toString() {
+        return "FiltersContainer{" +
+                "filters=" + filters +
+                '}';
+    }
 }
