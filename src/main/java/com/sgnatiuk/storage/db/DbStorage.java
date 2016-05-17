@@ -1,12 +1,15 @@
 package com.sgnatiuk.storage.db;
 
-import com.sgnatiuk.storage.IStorage;
 import com.sgnatiuk.Movie;
-import com.sgnatiuk.storage.filters.FiltersContainer;
-import com.sgnatiuk.storage.db.filters.DbFiltersFactory;
+import com.sgnatiuk.storage.IStorage;
 import com.sgnatiuk.storage.db.filters.DbFilter;
+import com.sgnatiuk.storage.db.filters.DbFiltersFactory;
+import com.sgnatiuk.storage.filters.FiltersContainer;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.StringJoiner;
 
 /**
  * Created by sgnatiuk on 5/16/16.

@@ -1,8 +1,8 @@
 package com.sgnatiuk.storage;
 
 import com.sgnatiuk.Movie;
-import com.sgnatiuk.storage.filters.FiltersContainer;
 import com.sgnatiuk.storage.filters.FiltersAbstractFactory;
+import com.sgnatiuk.storage.filters.FiltersContainer;
 import com.sgnatiuk.storage.filters.IFilter;
 
 import java.util.Collection;

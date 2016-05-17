@@ -1,10 +1,9 @@
 package com.sgnatiuk.storage;
 
 import com.sgnatiuk.Movie;
-import com.sgnatiuk.storage.file.FileStorage;
-import com.sgnatiuk.storage.filters.FiltersContainer;
 import com.sgnatiuk.storage.db.DbStorage;
 import com.sgnatiuk.storage.filters.FiltersAbstractFactory;
+import com.sgnatiuk.storage.filters.FiltersContainer;
 
 import java.util.Collection;
 
@@ -13,9 +12,7 @@ import java.util.Collection;
  */
 public class InjectedStorageContainer {
 
-    //it can be injected
-//    public IStorage<?> storage = new FileStorage();
-    public IStorage<?> storage = new DbStorage();
+    private IStorage<?> storage = new DbStorage();
 
     public void insertMovie(Movie movie){
         storage.insertMovie(movie);
@@ -27,5 +24,16 @@ public class InjectedStorageContainer {
 
     public FiltersAbstractFactory<?> getFiltersFactory(){
         return storage.getFiltersFactory();
+    }
+
+    public void setStorage(IStorage<?> storage){
+        this.storage=storage;
+    }
+
+    @Override
+    public String toString() {
+        return "InjectedStorageContainer{" +
+                "storage=" + storage +
+                '}';
     }
 }
