@@ -21,6 +21,6 @@ public class DbFiltersFactory extends FiltersAbstractFactory<DbFilter> {
 
     @Override
     public FiltersContainer<DbFilter> buildFiltersContainer() {
-        return new FiltersContainer<>();
+        return new FiltersContainer<DbFilter>(){};//anonymous subclass allows to use protected constructor
     }
 }

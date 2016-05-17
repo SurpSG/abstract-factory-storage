@@ -10,6 +10,8 @@ public class FiltersContainer<T extends IFilter> {
 
     private List<T> filters = new ArrayList<>();
 
+    protected FiltersContainer(){}//FiltersContainer allowed to build only by factories
+
     public FiltersContainer<T> addFilter(T filter){
         filters.add(filter);
         return this;

@@ -21,6 +21,6 @@ public class FiltersFactoryFileStorage extends FiltersAbstractFactory<FileStorag
 
     @Override
     public FiltersContainer<FileStorageFilter> buildFiltersContainer() {
-        return new FiltersContainer<>();
+        return new FiltersContainer<FileStorageFilter>(){};//anonymous subclass allows to use protected constructor
     }
 }
