@@ -1,14 +1,15 @@
 package com.sgnatiuk.storage.filters;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
  * Created by sgnatiuk on 5/16/16.
  */
 public class FiltersContainer<T extends IFilter> {
 
-    private List<T> filters = new ArrayList<>();
+    private Set<T> filters = new LinkedHashSet<>();
 
     protected FiltersContainer(){}//FiltersContainer allowed to build only by factories
 
@@ -26,7 +27,7 @@ public class FiltersContainer<T extends IFilter> {
         return null;
     }
 
-    public List<T> getFilters(){
+    public Collection<T> getFilters(){
         return filters;
     }
 

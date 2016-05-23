@@ -21,7 +21,7 @@ public class Main {
         Movie movie = new Movie();
         movie.setName("film name1");
         movie.setYear(2000);
-        movie.setGenres(Arrays.asList("genre1", "genre2"));
+        movie.addGenres(Arrays.asList("genre1", "genre2"));
         System.out.println("created movie: " + movie);
 
         storageContainer.insertMovie(movie);
@@ -35,7 +35,7 @@ public class Main {
         yearFilter.setUpValue(2001);
 
         GenreFilter genreFilter = filtersFactory.buildGenreFilter();
-        genreFilter.setGenres(Arrays.asList("genre2", "genre1"));
+        genreFilter.addGenres(Arrays.asList("genre2", "genre1"));
 
         FiltersContainer filterContainer = filtersFactory.buildFiltersContainer()
                 .addFilter(genreFilter)

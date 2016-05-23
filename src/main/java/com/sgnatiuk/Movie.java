@@ -1,6 +1,8 @@
 package com.sgnatiuk;
 
-import java.util.List;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by sgnatiuk on 5/16/16.
@@ -9,7 +11,7 @@ public class Movie {
 
     private String name;
     private int year;
-    private List<String> genres;
+    private Set<String> genres = new HashSet<>();
 
     public String getName() {
         return name;
@@ -27,12 +29,12 @@ public class Movie {
         this.year = year;
     }
 
-    public List<String> getGenres() {
+    public Collection<String> getGenres() {
         return genres;
     }
 
-    public void setGenres(List<String> genres) {
-        this.genres = genres;
+    public void addGenres(Collection<String> genres) {
+        this.genres.addAll(genres);
     }
 
     @Override

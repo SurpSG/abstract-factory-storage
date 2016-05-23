@@ -3,7 +3,7 @@ package com.sgnatiuk.storage.file.filters;
 import com.sgnatiuk.Movie;
 import com.sgnatiuk.storage.filters.GenreFilter;
 
-import java.util.List;
+import java.util.Collection;
 
 /**
  * Created by sgnatiuk on 5/16/16.
@@ -12,7 +12,7 @@ public class GenreFilterFileFilter extends GenreFilter implements FileStorageFil
 
     @Override
     public boolean filterMovieFromFile(Movie movie) {
-        List<String> movieGenres = movie.getGenres();
+        Collection<String> movieGenres = movie.getGenres();
         for (String genre : getGenres()) {
             if(movieGenres.contains(genre)){
                 return true;

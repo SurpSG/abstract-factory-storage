@@ -6,9 +6,8 @@ import com.sgnatiuk.storage.db.filters.DbFilter;
 import com.sgnatiuk.storage.db.filters.DbFiltersFactory;
 import com.sgnatiuk.storage.filters.FiltersContainer;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
+import java.util.Collections;
 import java.util.StringJoiner;
 
 /**
@@ -16,12 +15,11 @@ import java.util.StringJoiner;
  */
 public class DbStorage implements IStorage<DbFilter> {
 
-    private List<Movie> moviesSet = new ArrayList<>();
-
-
     @Override
     public void insertMovie(Movie movie) {
-        moviesSet.add(movie);
+
+        System.out.println(String.format("[DEBUG] insert into movies (name, year, genres) " +
+                "values (%s, %s,%s);", movie.getName(), movie.getYear(), movie.getGenres()));
     }
 
     @Override
@@ -31,7 +29,7 @@ public class DbStorage implements IStorage<DbFilter> {
 
         System.out.println("[DEBUG] select by query: "+selectQuery);
 
-        return moviesSet;
+        return Collections.emptyList();
     }
 
     private String buildSelectQuery(FiltersContainer<DbFilter> filters){

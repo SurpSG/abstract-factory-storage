@@ -1,21 +1,26 @@
 package com.sgnatiuk.storage.filters;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by sgnatiuk on 5/16/16.
  */
 public abstract class GenreFilter implements IFilter {
 
-    private List<String> genres = new ArrayList<>();
+    private Set<String> genres = new HashSet<>();
 
-    public List<String> getGenres() {
+    public Collection<String> getGenres() {
         return genres;
     }
 
-    public void setGenres(List<String> genres) {
-        this.genres = genres;
+    public void addGenres(Collection<String> genres) {
+        this.genres.addAll(genres);
+    }
+
+    public void removeGenre(String genre){
+        genres.remove(genre);
     }
 
     @Override
